@@ -23,3 +23,5 @@ npm start
 - FlatList
 - Touchable Components
 - Todo App
+- Alert
+- Dismissing Keyboard
