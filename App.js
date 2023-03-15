@@ -1,20 +1,31 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
 
 export default function App() {
+  const [name, setName] = useState("queen");
+  const [person, setPerson] = useState({
+    name: "mario",
+    age: 40,
+  });
+
+  const clickHandle = () => {
+    setName("king");
+    setPerson({
+      name: "maria",
+      age: 45,
+    });
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <View style={styles.header}>
-        <Text style={styles.boldText}>Hello World!</Text>
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.boldText}>
-          Lorem ipsum <Text>TEST TEXT</Text> dolor sit amet
-          {/* <Text> is inherit <Text> parent styles */}
-        </Text>
-        <Text>Lorem ipsum dolor sit amet</Text>
-        <Text>Lorem ipsum dolor sit amet</Text>
+      <Text>My name is {name}</Text>
+      <Text>
+        His name is {person.name} and his age is {person.age}
+      </Text>
+      <View style={styles.buttonContainer}>
+        <Button title="update state" onPress={clickHandle}></Button>
       </View>
     </View>
   );
@@ -27,16 +38,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  header: {
-    backgroundColor: "pink",
-    padding: 20,
-  },
-  boldText: {
-    fontWeight: "bold",
-  },
-  body: {
-    backgroundColor: "yellow",
-    padding: 20, // <Text> is not inherit <View> parent styles
-    fontWeight: "bold",
+  buttonContainer: {
+    paddingTop: 20,
   },
 });

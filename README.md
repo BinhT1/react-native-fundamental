@@ -10,3 +10,5 @@ npm install --force
 npm install expo
 npm start
 ```
+
+## Learn Form Youte Chanel: [The Net Ninja](https://www.youtube.com/@NetNinja)
