@@ -20,3 +20,4 @@ npm start
 - Using State
 - Text Input
 - List & ScrollView
+- FlatList
