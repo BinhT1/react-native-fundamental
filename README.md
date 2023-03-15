@@ -11,4 +11,11 @@ npm install expo
 npm start
 ```
 
-## Learn Form Youte Chanel: [The Net Ninja](https://www.youtube.com/@NetNinja)
+## Learn Form Youtube Channel: [The Net Ninja](https://www.youtube.com/@NetNinja)
+
+## What I Learn
+
+- Create App
+- View, Text, Styles
+- Using State
+- Text Input
