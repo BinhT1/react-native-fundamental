@@ -19,3 +19,4 @@ npm start
 - View, Text, Styles
 - Using State
 - Text Input
+- List & ScrollView

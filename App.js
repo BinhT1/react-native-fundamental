@@ -1,37 +1,29 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 
 export default function App() {
-  const [name, setName] = useState("King");
-  const [age, setAge] = useState("30");
+  const [people, setPeople] = useState([
+    { name: "king", key: "1" },
+    { name: "queen", key: "2" },
+    { name: "knight", key: "3" },
+    { name: "mario", key: "4" },
+    { name: "fool", key: "5" },
+    { name: "magician", key: "6" },
+    { name: "moon", key: "7" },
+    { name: "sun", key: "8" },
+  ]);
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
-      <Text>Enter name:</Text>
-      <TextInput
-        multiline
-        style={styles.input}
-        placeholder="e.g. Queen"
-        placeholderTextColor={"gray"}
-        onChangeText={(value) => {
-          setName(value);
-        }}
-      ></TextInput>
-      <Text>Enter age:</Text>
-      <TextInput
-        keyboardType="numeric"
-        style={styles.input}
-        placeholder="e.g. 40"
-        placeholderTextColor={"gray"}
-        onChangeText={(value) => {
-          setAge(value);
-        }}
-      ></TextInput>
-      <Text>
-        Name: {name}, age: {age}
-      </Text>
+      <StatusBar style="auto" hidden={true} />
+      <ScrollView>
+        {people.map((item) => (
+          <View key={item.key}>
+            <Text style={styles.item}>{item.name}</Text>
+          </View>
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -40,14 +32,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: 40,
+    paddingHorizontal: 20,
+    // alignItems: "center",
+    // justifyContent: "center",
   },
-  input: {
-    borderWidth: 1,
-    borderColor: "blue",
-    padding: 8,
-    margin: 10,
-    width: 200,
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: "pink",
+    fontSize: 24,
   },
 });
