@@ -1,5 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Touchable,
+  TouchableOpacity,
+} from "react-native";
 import React, { useState } from "react";
 
 export default function App() {
@@ -13,7 +20,14 @@ export default function App() {
     { name: "moon", id: "7" },
     { name: "sun", id: "8" },
   ]);
-
+  const pressHandle = (id) => {
+    console.log(id);
+    setPeople((prevPepple) => {
+      // don't know prevPeople argument ?????
+      // when pass a arrow function in SetState, random arguments in arrow function is going to be this state itself
+      return prevPepple.filter((person) => person.id != id);
+    });
+  };
   return (
     <View style={styles.container}>
       <StatusBar style="auto" hidden={true} />
@@ -25,17 +39,17 @@ export default function App() {
         numColumns={2}
         data={people}
         renderItem={({ item }) => {
-          return <Text style={styles.item}>{item.name}</Text>;
+          return (
+            <TouchableOpacity
+              onPress={() => {
+                pressHandle(item.id);
+              }}
+            >
+              <Text style={styles.item}>{item.name}</Text>
+            </TouchableOpacity>
+          );
         }}
       />
-
-      {/* <ScrollView>
-        {people.map((item) => (
-          <View id={item.id}>
-            <Text style={styles.item}>{item.name}</Text>
-          </View>
-        ))}
-      </ScrollView> */}
     </View>
   );
 }

@@ -13,7 +13,7 @@ npm start
 
 ## Learn Form Youtube Channel: [The Net Ninja](https://www.youtube.com/@NetNinja)
 
-## What I Learn
+## What I Learn, The Same With My Commit
 
 - Create App
 - View, Text, Styles
@@ -21,3 +21,4 @@ npm start
 - Text Input
 - List & ScrollView
 - FlatList
+- Touchable Components
