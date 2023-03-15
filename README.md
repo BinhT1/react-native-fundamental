@@ -25,3 +25,4 @@ npm start
 - Todo App
 - Alert
 - Dismissing Keyboard
+- Flexbox Basics & icon
