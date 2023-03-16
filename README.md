@@ -29,3 +29,4 @@ npm start
 - Custom Fonts
 - Global Styles
 - Navigation
+- PassingData & Navigation Options
