@@ -27,3 +27,4 @@ npm start
 - Dismissing Keyboard
 - Flexbox Basics & icon
 - Custom Fonts
+- Global Styles
