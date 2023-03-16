@@ -28,3 +28,4 @@ npm start
 - Flexbox Basics & icon
 - Custom Fonts
 - Global Styles
+- Navigation
