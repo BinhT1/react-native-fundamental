@@ -26,3 +26,4 @@ npm start
 - Alert
 - Dismissing Keyboard
 - Flexbox Basics & icon
+- Custom Fonts
