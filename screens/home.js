@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { globalStyles } from "../styles/global";
+import Card from "../share/card";
 
 export default function Home({ navigation }) {
   const [reviews, setReviews] = useState([
@@ -31,19 +32,17 @@ export default function Home({ navigation }) {
     },
   ]);
 
-  const pressHandler = () => {
-    navigation.push("Review Detail");
-  };
-
   return (
     <View style={globalStyles.container}>
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate("ReviewDetails", item)}
+            onPress={() => navigation.navigate("ReviewDetail", item)}
           >
-            <Text style={globalStyles.titleText}>{item.title}</Text>
+            <Card>
+              <Text style={globalStyles.titleText}>{item.title}</Text>
+            </Card>
           </TouchableOpacity>
         )}
       />

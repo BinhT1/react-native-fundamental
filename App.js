@@ -8,6 +8,7 @@ import { Button, StatusBar } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import About from "./screens/about";
 import Header from "./share/header";
+import ReviewDetail from "./screens/reviewDetail";
 
 const Drawer = createDrawerNavigator();
 
@@ -34,6 +35,10 @@ export default function App() {
           }}
         ></Drawer.Screen>
         <Drawer.Screen name="About" component={About} />
+        <Stack.Screen
+          name="ReviewDetail"
+          component={ReviewDetail}
+        ></Stack.Screen>
       </Drawer.Navigator>
     </NavigationContainer>
   );
