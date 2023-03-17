@@ -33,3 +33,4 @@ npm start
 - SideBar(Drawer) & Custom Header
 - Image
 - ImageBackground
+- Modal
