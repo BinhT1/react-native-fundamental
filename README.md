@@ -34,3 +34,4 @@ npm start
 - Image
 - ImageBackground
 - Modal
+- Formik & Yup
