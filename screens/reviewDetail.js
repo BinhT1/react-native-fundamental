@@ -5,7 +5,6 @@ import Card from "../share/card";
 
 export default function ReviewDetail({ route, navigation }) {
   const data = route.params;
-  console.log(route);
 
   return (
     <View style={globalStyles.container}>
@@ -22,5 +21,7 @@ export default function ReviewDetail({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-  rating: {},
+  rating: {
+    flexDirection: "row",
+  },
 });

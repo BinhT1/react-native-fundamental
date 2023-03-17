@@ -3,16 +3,14 @@ import React from "react";
 import Home from "./screens/home";
 import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { Button, StatusBar } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import About from "./screens/about";
 import Header from "./share/header";
-import ReviewDetail from "./screens/reviewDetail";
+import HomeStack from "./routes/homeStack";
 
 const Drawer = createDrawerNavigator();
-
-const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [fontLoaded, error] = useFonts({
@@ -28,17 +26,13 @@ export default function App() {
       <StatusBar hidden={false}></StatusBar>
       <Drawer.Navigator screenOptions={{}}>
         <Drawer.Screen
-          name="Home"
-          component={Home}
+          name="HomeStack"
+          component={HomeStack}
           options={{
             header: (props) => <Header {...props} title={"Home"} />,
           }}
         ></Drawer.Screen>
         <Drawer.Screen name="About" component={About} />
-        <Stack.Screen
-          name="ReviewDetail"
-          component={ReviewDetail}
-        ></Stack.Screen>
       </Drawer.Navigator>
     </NavigationContainer>
   );

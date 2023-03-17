@@ -31,3 +31,5 @@ npm start
 - Navigation
 - PassingData & Navigation Options
 - SideBar(Drawer) & Custom Header
+- Image
+- ImageBackground

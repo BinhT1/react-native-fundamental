@@ -38,7 +38,12 @@ export default function Home({ navigation }) {
         data={reviews}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate("ReviewDetail", item)}
+            onPress={() =>
+              navigation.navigate("HomeStack", {
+                screen: "ReviewDetails",
+                params: item,
+              })
+            }
           >
             <Card>
               <Text style={globalStyles.titleText}>{item.title}</Text>
